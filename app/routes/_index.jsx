@@ -111,14 +111,14 @@ export default function Index() {
               <label htmlFor="url" className="block text-sm font-medium text-gray-700 mb-1.5">
                 Long URL
               </label>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   id="url"
                   name="url"
                   type="text"
                   placeholder="https://example.com/very/long/url"
                   autoComplete="off"
-                  className={`flex-1 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 transition-all ${
+                  className={`flex-1 min-w-0 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 transition-all ${
                     errors.url
                       ? 'border-red-300 focus:ring-red-200'
                       : 'border-gray-200 focus:ring-brand-200 focus:border-brand-400'
@@ -127,7 +127,7 @@ export default function Index() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-3 bg-brand-600 text-white rounded-xl font-semibold text-sm hover:bg-brand-700 active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
+                  className="w-full sm:w-auto px-6 py-3 bg-brand-600 text-white rounded-xl font-semibold text-sm hover:bg-brand-700 active:scale-95 transition-all disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
                 >
                   {isSubmitting ? 'Shortening…' : 'Shorten ✂️'}
                 </button>
